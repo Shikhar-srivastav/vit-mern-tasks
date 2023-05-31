@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MERN Stack</title>
+	<style>
+		* {
+			font-size: 16px;
+			font-family: Work Sans;
+		}
+		.wrapper {
+			display: flex;
+			place-content: center;
+		}
+		h1 {
+			font-size: 2rem;
+			text-align: center;
+			margin-block: 8px;
+		}
+		td:nth-child(1) {
+			text-align: right;
+		}
+		#declare > td {
+			text-align: left;
+		}
+		#submitBtn > td {
+			padding-top: 8px;
+			text-align: center;
+		}
+		input[type="text"], input[type="password"], textarea {
+			width: 95%;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<form action="" novalidate>
+			<h1>Registration Form</h1>
+			<table cellspacing=8>
+				<tr id="firstName">
+					<td><label for=""><strong>First Name</strong></label></td>
+					<td><input type="text"></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="lastName">
+					<td><label for=""><strong>Last Name</strong></label></td>
+					<td><input type="text"></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="email">
+					<td><label for=""><strong>Email</strong></label></td>
+					<td><input type="text"></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="password">
+					<td><label for=""><strong>Password</strong></label></td>
+					<td><input type="password"></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="rePassword">
+					<td><label for=""><strong>Re-enter Password</strong></label></td>
+					<td><input type="password"></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="gender">
+					<td><label for=""><strong>Languages Known</strong></label></td>
+					<td>
+						<input type="radio" name="gender">
+						<label for="">Male</label>
+						<input type="radio" name="gender">
+						<label for="">Female</label>
+					</td>
+				</tr>
+				<tr id="age">
+					<td><label for=""><strong>Age</strong></label></td>
+					<td><input type="text"></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="phoneNum">
+					<td><label for=""><strong>Phone Number</strong></label></td>
+					<td><input type="text"></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="address">
+					<td><label for=""><strong>Address</strong></label></td>
+					<td><textarea cols="20" rows="5"></textarea></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="state">
+					<td><label for=""><strong>State</strong></label></td>
+					<td><input type="text"></td>
+					<td class="status hidden">Lorem, ipsum.</td>
+				</tr>
+				<tr id="country">
+					<td><label for=""><strong>Country</strong></label></td>
+					<td>
+						<select>
+							<option selected>Choose your country</option>
+						</select>
+					</td>
+				</tr>
+				<tr id="languages">
+					<td><label for=""><strong>Languages Known</strong></label></td>
+					<td>
+						<input type="checkbox">
+						<label for="">English</label>
+						<input type="checkbox">
+						<label for="">Kannada</label>
+						<input type="checkbox">
+						<label for="">Hindi</label>
+						<input type="checkbox">
+						<label for="">Telugu</label>
+					</td>
+				</tr>
+				<tr id="declare">
+					<td colspan="2">
+						<input type="checkbox">
+						<label for="">I hereby declare all geiven details are true</label>
+					</td>
+				</tr>
+				<tr id="siteLink">
+					<td colspan="2">
+						<label for="">Log in to <a href="">Ethnus</a> website</label>
+					</td>
+				</tr>
+				<tr id="submitBtn">
+					<td colspan="3"><button>Register</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

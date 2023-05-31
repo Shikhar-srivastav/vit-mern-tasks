@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MERN Stack</title>
+	<style>
+		* {
+			font-size: 16px;
+			font-family: Work Sans;
+		}
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		.wrapper {
+			height: 100vh;
+			width: 100vw;
+			background-color: #8C1B59;
+			display: flex;
+			place-content: center;
+			place-items: center;
+		}
+		input[type="text"], input[type="email"], input[type="password"], textarea {
+			width: 220px;
+		}
+		label {
+			color: white;
+		}
+		.container {
+			padding: 2rem 4rem;
+			background-color: #731749;
+		}
+		table {
+			border-spacing: 12px;
+		}
+		button {
+			width: 100%;
+			border: none;
+			border-radius: 4px;
+			font-size: 20px;
+			padding: 4px;
+			font-weight: bold;
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<form action="">
+				<table>
+					<tr>
+						<td><label for="">Name:</label></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td><label for="">Email:</label></td>
+						<td><input type="email"></td>
+					</tr>
+					<tr>
+						<td><label for="">Password:</label></td>
+						<td><input type="password"></td>
+					</tr>
+					<tr>
+						<td><label for="">Phone Number:</label></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td><label for="">Gender:</label></td>
+						<td>
+							<input type="radio" name="gender">
+							<label for="">Male</label>
+							<input type="radio" name="gender">
+							<label for="">Female</label>
+							<input type="radio" name="gender">
+							<label for="">Other</label>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="">Language:</label></td>
+						<td>
+							<select>
+								<option selected>Select Language</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="">Zip Code:</label></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td><label for="">About:</label></td>
+						<td><textarea cols="21" rows="5"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2"><button>Register</button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

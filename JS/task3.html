@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MERN Stack</title>
+	<style>
+		span {
+			color: red;
+		}
+		.invalid {
+			border-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Day 5 Assignment 3</h1>
+	<form action="" novalidate>
+		<div>
+			<label for="name">Name: </label>
+			<input type="text" id="name">
+			<span id="name-text"></span>
+		</div>
+		<br>
+		<div>
+			<label for="mail">Email: </label>
+			<input type="email" id="mail">
+			<span id="mail-text"></span>
+		</div>
+		<br>
+		<div>
+			<label for="site">Website: </label>
+			<input type="url" id="site">
+			<span id="site-text"></span>
+		</div>
+		<br>
+		<div>
+			<label for="msg">Message: </label>
+			<textarea id="msg"></textarea>
+			<span id="msg-text"></span>
+		</div>
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+	<script>
+		document.getElementsByTagName("form")[0].addEventListener("submit", function (e) {
+			e.preventDefault()
+
+			var name = document.getElementById("name");
+			var mail = document.getElementById("mail");
+			var site = document.getElementById("site");
+			var msg = document.getElementById("msg");
+
+			var nameTxt = document.getElementById("name-text");
+			var mailTxt = document.getElementById("mail-text");
+			var siteTxt = document.getElementById("site-text");
+			var msgTxt = document.getElementById("msg-text");
+
+			name.classList.remove("invalid");
+			mail.classList.remove("invalid");
+			site.classList.remove("invalid");
+			msg.classList.remove("invalid");
+
+			nameTxt.innerText = "";
+			mailTxt.innerText = "";
+			siteTxt.innerText = "";
+			msgTxt.innerText = "";
+
+			if (!name.value) {
+				nameTxt.innerText = "This field is required";
+				name.classList.add("invalid");
+			}
+			if (!mail.value) {
+				mailTxt.innerText = "A valid email address is required";
+				mail.classList.add("invalid");
+			}
+			if (!site.value) {
+				siteTxt.innerText = "A valid url is required";
+				site.classList.add("invalid");
+			}
+			if (!msg.value) {
+				msgTxt.innerText = "This field is required";
+				msg.classList.add("invalid");
+			}
+		})
+	</script>
+</body>
+</html>

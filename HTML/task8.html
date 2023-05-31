@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MERN Stack</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		table {
+			gap: 0;
+			border-collapse: collapse;
+			margin-bottom: 24px;
+		}
+		tr > * {
+			border: 1px solid black;
+		}
+		td:nth-child(2) {
+			width: 400px;
+		}
+		input[type="text"], input[type="password"], textarea {
+			width: 98.5%;
+		}
+		p {
+			margin-block: 0;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<h1>Registration Form</h1>
+		<table>
+			<tr>
+				<th>First Name</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td><input type="password"></td>
+			</tr>
+			<tr>
+				<th>Re-Enter Password</th>
+				<td><input type="password"></td>
+			</tr>
+			<tr>
+				<th rowspan="2">Gender</th>
+				<td>
+					<input type="radio" name="gender">
+					<label>Male</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" name="gender">
+					<label>Female</label>
+				</td>
+			</tr>
+			<tr>
+				<th>Age</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>Phone Number</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>Address</th>
+				<td><textarea rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<th>State</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>Country</th>
+				<td>
+					<select name="" id="">
+						<option selected>Choose your country</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>Languages Known</th>
+				<td>
+					<input type="checkbox">
+					<label for="">English</label>
+					<input type="checkbox">
+					<label for="">Kannada</label>
+					<input type="checkbox">
+					<label for="">Hindi</label>
+					<input type="checkbox">
+					<label for="">Telugu</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="checkbox">
+					<span>I hereby declare all the given details are true</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<p>Log in to <a href="#">Ethnus</a> website</p>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<button>Register</button>
+	</form>
+</body>
+</html>
