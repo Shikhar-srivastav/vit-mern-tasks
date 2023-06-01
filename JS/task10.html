@@ -4,9 +4,108 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>MERN Stack</title>
+	<style>
+		* {
+			font-family: Work Sans;
+			font-size: 16px;
+		}
+	</style>
 </head>
 <body>
-	
+	<script>
+		var a = [10, 20, 30];
+		var b = [40, 50, 60];
+		var res;
+		document.write("concat method:<br>");
+		console.log("concat method:");
+		a = a.concat(b);
+		document.write(a + "<br><br>");
+		console.log(a);
+
+		document.write("copyWithin method:<br>");
+		console.log("copyWithin method:");
+		a = a.copyWithin(3, 0, 3)
+		document.write(a + "<br><br>");
+		console.log(a);
+
+		document.write("forEach method:<br>");
+		console.log("forEach method:");
+		a.forEach((num) => {
+			document.write(num + "<br>");
+			console.log(num)
+		})
+		document.write("<br>");
+
+		document.write("every method:<br>");
+		console.log("every method:");
+		res = a.every((num) => {
+			return num > 15;
+		})
+		document.write(res + "<br><br>");
+		console.log(res);
+
+		document.write("some method:<br>");
+		console.log("some method:");
+		res = a.some((num) => {
+			return num > 15;
+		})
+		document.write(res + "<br><br>");
+		console.log(res);
+
+		document.write("filter method:<br>");
+		console.log("filter method:");
+		res = a.filter((num) => {
+			return num > 15;
+		})
+		document.write(res + "<br><br>");
+		console.log(res);
+
+		document.write("find method:<br>");
+		console.log("find method:");
+		res = a.find((num) => {
+			return num == 20;
+		})
+		document.write(res + "<br><br>");
+		console.log(res);
+
+		document.write("findIndex method:<br>");
+		console.log("findIndex method:");
+		res = a.findIndex((num) => {
+			return num == 20;
+		})
+		document.write(res + "<br><br>");
+		console.log(res);
+
+		document.write("indexOf method:<br>");
+		console.log("indexOf method:");
+		res = a.indexOf(20);
+		document.write(res + "<br><br>");
+		console.log(res);
+
+		document.write("lastIndexOf method:<br>");
+		console.log("lastIndexOf method:");
+		res = a.lastIndexOf(20);
+		document.write(res + "<br><br>");
+		console.log(res);
+
+		document.write("push method:<br>");
+		console.log("push method:");
+		res = a.push(100);
+		document.write(a + "<br><br>");
+		console.log(a);
+
+		document.write("pop method:<br>");
+		console.log("pop method:");
+		res = a.pop();
+		document.write(a + "<br><br>");
+		console.log(a);
+
+		document.write("shift method:<br>");
+		console.log("shift method:");
+		res = a.shift();
+		document.write(a + "<br><br>");
+		console.log(a);
+	</script>
 </body>
 </html>

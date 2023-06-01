@@ -10,17 +10,26 @@
 			font-size: 16px;
 			font-family: Work Sans;
 		}
+		body {
+			margin: 0;
+			height: 100vh;
+			background-image: radial-gradient(circle at top, yellow 30%, pink 70%);
+		}
 		.wrapper {
 			display: flex;
 			place-content: center;
 		}
 		h1 {
+			color: blue;
 			font-size: 2rem;
 			text-align: center;
 			margin-block: 8px;
 		}
 		td:nth-child(1) {
 			text-align: right;
+		}
+		td:nth-child(3) {
+			width: 150px;
 		}
 		#declare > td {
 			text-align: left;
@@ -32,6 +41,24 @@
 		input[type="text"], input[type="password"], textarea {
 			width: 95%;
 		}
+		button {
+			color: white;
+			background-color: red;
+			padding: 4px 16px;
+			border-radius: 20px;
+			border: 2px solid black;
+		}
+		.hidden {
+			visibility: hidden;
+		}
+		.valid {
+			color: green;
+			visibility: initial;
+		}
+		.invalid {
+			color: red;
+			visibility: visible;
+		}
 	</style>
 </head>
 <body>
@@ -42,27 +69,27 @@
 				<tr id="firstName">
 					<td><label for=""><strong>First Name</strong></label></td>
 					<td><input type="text"></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="lastName">
 					<td><label for=""><strong>Last Name</strong></label></td>
 					<td><input type="text"></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="email">
 					<td><label for=""><strong>Email</strong></label></td>
 					<td><input type="text"></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="password">
 					<td><label for=""><strong>Password</strong></label></td>
 					<td><input type="password"></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="rePassword">
 					<td><label for=""><strong>Re-enter Password</strong></label></td>
 					<td><input type="password"></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="gender">
 					<td><label for=""><strong>Languages Known</strong></label></td>
@@ -76,22 +103,22 @@
 				<tr id="age">
 					<td><label for=""><strong>Age</strong></label></td>
 					<td><input type="text"></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="phoneNum">
 					<td><label for=""><strong>Phone Number</strong></label></td>
 					<td><input type="text"></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="address">
 					<td><label for=""><strong>Address</strong></label></td>
 					<td><textarea cols="20" rows="5"></textarea></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="state">
 					<td><label for=""><strong>State</strong></label></td>
 					<td><input type="text"></td>
-					<td class="status hidden">Lorem, ipsum.</td>
+					<td class="hidden"></td>
 				</tr>
 				<tr id="country">
 					<td><label for=""><strong>Country</strong></label></td>
@@ -126,10 +153,46 @@
 					</td>
 				</tr>
 				<tr id="submitBtn">
-					<td colspan="3"><button>Register</button></td>
+					<td colspan="3"><button type="submit">Register</button></td>
 				</tr>
 			</table>
 		</form>
 	</div>
+	<script>
+		var firstName = document.getElementById("firstName");
+		var lastName = document.getElementById("lastName");
+		var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		var rePassword = document.getElementById("rePassword");
+		var age = document.getElementById("age");
+		var phoneNum = document.getElementById("phoneNum");
+		var address = document.getElementById("address");
+		var state = document.getElementById("state");
+
+		var form = document.getElementsByTagName("form")[0];
+		var fields = [ firstName, lastName, email, password, rePassword, age, phoneNum, address, state ]; 
+
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+
+			fields.forEach((field) => {
+				if(!field.children[1].firstChild.value) {
+					field.children[2].classList.remove("valid");
+					field.children[2].classList.add("invalid");
+					field.children[2].textContent = "POOR";
+				} else {
+					field.children[2].classList.remove("invalid");
+					field.children[2].classList.add("valid");
+					field.children[2].textContent = "GOOD";
+				}
+			})
+
+			if(rePassword.children[1].firstChild.value != password.children[1].firstChild.value) {
+				rePassword.children[2].classList.remove("valid");
+				rePassword.children[2].classList.add("invalid");
+				rePassword.children[2].textContent = "MISMATCH";
+			}
+		})
+	</script>
 </body>
 </html>
